@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Rei-API Docs</title>
+
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="modules/fontawesome/css/all.min.css">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="modules/summernote/summernote-bs4.css">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar">
+                <form class="form-inline mr-auto">
+                    <ul class="navbar-nav mr-3">
+                        <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+                        <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+                    </ul>
+                    <div class="search-element">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
+                        <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+                        <div class="search-backdrop"></div>
+                        <div class="search-result">
+                            <div class="search-header">
+                                Histories
+                            </div>
+                            <div class="search-header">
+                                Result
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <ul class="navbar-nav navbar-right">
+                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
+                        <div class="dropdown-menu dropdown-list dropdown-menu-right">
+                            <div class="dropdown-header">Messages
+                                <div class="float-right">
+                                </div>
+                            </div>
+                            <div class="dropdown-list-content dropdown-list-message">
+                                <a href="#" class="dropdown-item dropdown-item-unread">
+                                    <div class="dropdown-item-avatar">
+                                        <img alt="image" src="/static/icon/favicon.png" class="rounded-circle">
+                                        <div class="is-online"></div>
+                                    </div>
+                                    <div class="dropdown-item-desc">
+                                        <b>Reiyuura</b>
+                                        <p>Hello, Bro!</p>
+                                        <div class="time">10 Hours Ago</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="/static/icon/favicon.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Broo </div></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-title">Logged in 5 min ago</div>
+                            <a href="#" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Profile
+              </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="/credits" class="dropdown-item has-icon">
+                <i class="fas fa-pencil-ruler"></i> Credits
+              </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+                <aside id="sidebar-wrapper">
+                    <div class="sidebar-brand">
+                        <a href="/docs">Rei-API</a>
+                    </div>
+                    <div class="sidebar-brand sidebar-brand-sm">
+                        <a href="#">R-API</a>
+                    </div>
+                    <ul class="sidebar-menu">
+                        <li class="menu-header">Dashboard</li>
+                        <li class="dropdown active">
+                            <a href="#" class="nav-link has-dropdown"><i class="fas fa-home"></i><span>Dashboard</span></a>
+                            <ul class="dropdown-menu">
+                                <li class=active><a class="nav-link" href="/docs">General Dashboard</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-header">Starter</li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-quran"></i><span>Islami</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/islami/alquran" target="_blank">Alquran</a></li>
+                                <li><a class="nav-link" href="/api/islami/asmaulhusna" target="_blank">Asmaul Husna</a></li>
+                                <li><a class="nav-link" href="/api/islami/niatsholat" target="_blank">Niat Sholat</a></li>
+                                <li><a class="nav-link" href="/api/islami/doaharian" target="_blank">Doa Harian</a></li>
+                                <li><a class="nav-link" href="/api/islami/tahlil" target="_blank">Tahlil</a></li>
+                                <li><a class="nav-link" href="/api/islami/wirid" target="_blank">Wirid</a></li>
+                                <li><a class="nav-link" href="/api/islami/kisah-nabi?q=muhammad" target="_blank">Kisah Nabi</a></li>
+                                <li><a class="nav-link" href="/api/islami/bacaansholat" target="_blank">Bacaan Sholat</a></li>
+                                <li><a class="nav-link" href="/api/islami/quotes" target="_blank">Quotes</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-download"></i> <span>Media Downloader</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/dl/ig?url=https://www.instagram.com/p/CG4qI0aDoyP" target="_blank">Instagram</a></li>
+                                <li><a class="nav-link" href="/api/dl/igstory?username=menruinyanko" target="_blank">Instagram Story</a></li>
+                                <li><a class="nav-link" href="/api/dl/igtv?url=https://www.instagram.com/tv/B7p88lCB9Xk/" target="_blank">Instagram TV</a></li>
+                                <li><a class="nav-link" href="/api/dl/tiktok?url=https://www.tiktok.com/@tiktok/video/6807491984882765062" target="_blank">Tiktok No WM</a></li>
+                                <li><a class="nav-link" href="/api/dl/tiktokv2?url=https://www.tiktok.com/@tiktok/video/6807491984882765062" target="_blank">Tiktok No WM V2</a></li>
+                                <li><a class="nav-link" href="/api/dl/ttmusik?url=https://www.tiktok.com/@tiktok/video/6807491984882765062" target="_blank">TikTok Musik</a></li>
+                                <li><a class="nav-link" href="/api/dl/ytv?url=https://www.youtube.com/watch?v=WGgEFoI9MhE" target="_blank">YouTube Mp4</a></li>
+                                <li><a class="nav-link" href="/api/dl/yta?url=https://www.youtube.com/watch?v=WGgEFoI9MhE" target="_blank">YouTube Mp3</a></li>
+                                <li><a class="nav-link" href="/api/dl/ytav?url=https://www.youtube.com/watch?v=WGgEFoI9MhE" target="_blank">YouTube Download</a></li>
+                                <li><a class="nav-link" href="/api/dl/ytavv2?url=https://www.youtube.com/watch?v=WGgEFoI9MhE" target="_blank">YouTube Download V2</a></li>
+                                <li><a class="nav-link" href="/api/dl/ytplay?q=reflect-gawr+gura" target="_blank">YouTube Play Mp3/Mp4</a></li>
+                                <li><a class="nav-link" href="/api/dl/rexdl?url=https://rexdlbox.com/index.php?id=mx-player-pro-apk" target="_blank">Rexdl</a></li>
+                                <li><a class="nav-link" href="/api/dl/mediafire?url=https://www.mediafire.com/file/mk5fth4m9ec7g8b/MediaFire_-_Getting_Started.pdf/file" target="_blank">Mediafire</a></li>
+                                <li><a class="nav-link" href="/api/dl/facebook?url=https://www.facebook.com/alanwalkermusic/videos/1187772845038970" target="_blank">Facebook</a></li>
+                                <li><a class="nav-link" href="/api/dl/Joox?q=alone" target="_blank">Joox</a></li>
+                                <li><a class="nav-link" href="/api/dl/twitter?url=https://twitter.com/OlaLandnft/status/1431079611576713223" target="_blank">Twitter</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-images"></i><span>Anime</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/image/shinobu" target="_blank">Shinobu</a></li>
+                                <li><a class="nav-link" href="/api/image/megumin" target="_blank">Megumin</a></li>
+                                <li><a class="nav-link" href="/api/image/awoo" target="_blank">Awoo</a></li>
+                                <li><a class="nav-link" href="/api/image/bonk" target="_blank">Bonk</a></li>
+                                <li><a class="nav-link" href="/api/image/smile" target="_blank">Smile</a></li>
+                                <li><a class="nav-link" href="/api/image/happy" target="_blank">Happy</a></li>
+                                <li><a class="nav-link" href="/api/image/neko" target="_blank">Neko</a></li>
+                                <li><a class="nav-link" href="/api/image/neko2" target="_blank">Neko V2</a></li>
+                                <li><a class="nav-link" href="/api/image/foxgirl" target="_blank">Fox Girl</a></li>
+                                <li><a class="nav-link" href="/api/image/avatar" target="_blank">Avatar</a></li>
+                                <li><a class="nav-link" href="/api/image/kemonomimi" target="_blank">Kemonomimi</a></li>
+                                <li><a class="nav-link" href="/api/image/wallpaper2" target="_blank">Wallpaper</a></li>
+                                <li><a class="nav-link" href="/api/image/wpmobile" target="_blank">Wallpaper Mobile</a></li>
+                                <li><a class="nav-link" href="/api/image/jahy" target="_blank">Jahy</a></li>
+                                <li><a class="nav-link" href="/api/image/waifu" target="_blank">Waifu</a></li>
+                                <li><a class="nav-link" href="/api/image/cry" target="_blank">Cry</a></li>
+                                <li><a class="nav-link" href="/api/image/kiss" target="_blank">Kiss</a></li>
+                                <li><a class="nav-link" href="/api/image/hug" target="_blank">Hug</a></li>
+                                <li><a class="nav-link" href="/api/image/nsfw/neko" target="_blank">Neko NSFW</a></li>
+                                <li><a class="nav-link" href="/api/image/nsfw/waifu" target="_blank">Waifu NSFW</a></li>
+                                <li><a class="nav-link" href="/api/image/tebakanime" target="_blank">Tebak Anime</a></li>
+                                <li><a class="nav-link" href="/api/search/chara?q=sagiri" target="_blank">Chara Anime Search</a></li>
+                                <li><a class="nav-link" href="/api/search/komiku?q=boruto" target="_blank">Komiku</a></li>
+                                <li><a class="nav-link" href="/api/search/otakudesu?q=boruto" target="_blank">Otakudesu Search</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-image"></i><span>Wallpaper</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/anime/wallpaper3?q=naruto" target="_blank">Alphacoders</a></li>
+                                <li><a class="nav-link" href="/api/anime/wallpaper4?q=elaina" target="_blank">Wallpaper Cave</a></li>
+                                <li><a class="nav-link" href="/api/anime/wallpaper" target="_blank">4K Wallpaper</a></li>
+                                <li><a class="nav-link" href="/api/anime/wallpaper2" target="_blank">WallHeaven</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-search"></i><span>Searching</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/search/kbbi?q=kenapa" target="_blank">KBBI</a></li>
+                                <li><a class="nav-link" href="/api/search/brainly?q=apa+itu+otaku" target="_blank">Brainly</a></li>
+                                <li><a class="nav-link" href="/api/search/igstalk?username=reiyuura" target="_blank">Instagram Stalk</a></li>
+                                <li><a class="nav-link" href="/api/search/rexdl?q=mx player" target="_blank">Rexdl Search App</a></li>
+                                <li><a class="nav-link" href="/api/search/yt?q=Rainych" target="_blank">YouTube Search</a></li>
+                                <li><a class="nav-link" href="/api/search/yt2?q=Rainych" target="_blank">YouTube Search V2</a></li>
+                                <li><a class="nav-link" href="/api/search/google-search?q=elaina" target="_blank">Google Search</a></li>
+                                <li><a class="nav-link" href="/api/search/playstore?q=mx+player" target="_blank">Google PlayStore</a></li>
+                                <li><a class="nav-link" href="/api/search/happymod?q=mx+player" target="_blank">Happymod</a></li>
+                                <li><a class="nav-link" href="/api/search/githubfull?q=hazaku-rei" target="_blank">GitHub Stalk</a></li>
+                                <li><a class="nav-link" href="/api/search/github?q=hazaku-rei" target="_blank">Github Stalk Simple</a></li>
+                                <li><a class="nav-link" href="/api/search/github-followers?q=hazaku-rei" target="_blank">Github Follower Cek</a></li>
+                                <li><a class="nav-link" href="/api/search/grupwa?q=meme" target="_blank">Grup WA</a></li>
+                                <li><a class="nav-link" href="/api/search/genshin?query=keqing" target="_blank">Genshin Impact Chara</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-film"></i><span>Film Apik API</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/filmapik/search?q=spongebob" target="_blank">Search</a></li>
+                                <li><a class="nav-link" href="/api/filmapik/latest" target="_blank">Latest</a></li>
+                                <li><a class="nav-link" href="/api/filmapik/country?search=japan" target="_blank">Country</a></li>
+                                <li><a class="nav-link" href="/api/filmapik/category?search=action" target="_blank">Category</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-moon"></i><span>Primbon</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/primbon/artimimpi?q=mati" target="_blank">Arti Mimpi</a></li>
+                                <li><a class="nav-link" href="/api/primbon/artinama?q=rei" target="_blank">Arti nama</a></li>
+                                <li><a class="nav-link" href="/api/primbon/jodoh?nama1=rei&nama2=yuura" target="_blank">Jodoh</a></li>
+                                <li><a class="nav-link" href="/api/primbon/nomor-hoki?nomor=08811223344" target="_blank">Nomor Hoki</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-thumbtack"></i><span>Photooxy</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/photooxy/shadow?q=Rei-API" target="_blank">Shadow</a></li>
+                                <li><a class="nav-link" href="/api/photooxy/romantic?q=rei-api" target="_blank">Romantic</a></li>
+                                <li><a class="nav-link" href="/api/photooxy/smoke?q=Rei-API" target="_blank">Smoke</a></li>
+                                <li><a class="nav-link" href="/api/photooxy/naruto?q=Rei-API" target="_blank">Naruto</a></li>
+                                <li><a class="nav-link" href="/api/photooxy/message-under-grass?q=Rei-API" target="_blank">Under Grass</a></li>
+                                <li><a class="nav-link" href="/api/photooxy/love-message?q=Rei-API" target="_blank">Love Message</a></li>
+                                <li><a class="nav-link" href="/api/photooxy/tiktok-effect?text1=hello&text2=world" target="_blank">TikTok Effect</a></li>
+                                <li><a class="nav-link" href="/api/photooxy/neon?q=Rei-API" target="_blank">Neon</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-fire"></i> <span>Misc & Fun</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/api/fakename?country=de" target="_blank">Fake Data</a></li>
+                                <li><a class="nav-link" href="/api/gen-password" target="_blank">Password Generator</a></li>
+                                <li><a class="nav-link" href="/api/whois?q=hazakura.my.id" target="_blank">Whois</a></li>
+                                <li><a class="nav-link" href="/api/simi?q=halo" target="_blank">Simi-Simi</a></li>
+                                <li><a class="nav-link" href="/api/tebakgambar" target="_blank">Tebak Gambar</a></li>
+                                <li><a class="nav-link" href="/api/covid" target="_blank">Covid Info</a></li>
+                                <li><a class="nav-link" href="/api/fun/memeindo" target="_blank">Meme</a></li>
+                                <li><a class="nav-link" href="/api/darkjokes" target="_blank">Dark Jokes</a></li>
+                                <li><a class="nav-link" href="/api/quotes" target="_blank">Quotes</a></li>
+                            </ul>
+                        </li>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="/credits"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a>
+                        </li>
+                    </ul>
+                    <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+                        <a href="https://reiyuura.me" class="btn btn-primary btn-lg btn-block btn-icon-split">
+              <i class="fas fa-rocket"></i> About Me
+            </a>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <section class="section">
+                    <div class="section-header">
+                        <h1>Profile</h1>
+                        <div class="section-header-breadcrumb">
+                            <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+                        </div>
+                    </div>
+                    <div class="section-body">
+                        <h2 class="section-title">Hi, Broo</h2>
+                        <p class="section-lead">
+                            This profile about Reiyuura :).
+                        </p>
+                        <div class="row mt-sm-4">
+                            <div class="col-12 col-md-12 col-lg-5">
+                                <div class="card profile-widget">
+                                    <div class="profile-widget-header">
+                                        <img alt="image" src="/static/icon/favicon.png" class="rounded-circle profile-widget-picture">
+                                        <div class="profile-widget-items">
+                                            <div class="profile-widget-item">
+                                                <div class="profile-widget-item-label">Feature API</div>
+                                                <div class="profile-widget-item-value">IDK</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="profile-widget-description">
+                                        <div class="profile-widget-name">Reiyuura
+                                            <div class="text-muted d-inline font-weight-normal">
+                                                <div class="slash"></div> As a Nub Developer</div>
+                                        </div>
+                                        My name is Reiyuura :)
+                                        <p><b>This website is still under development</b></p>.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h4>Changelogs</h4>
+                                <div class="card-header-action">
+                                    <a href="#" class="btn btn-primary">
+                    View All
+                  </a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <b><h6>08-08-2021</h6></b>
+                                <p> - Website created</p>
+                                <b><h6>08-09-2021</h6></b>
+                                <p> - Added Searching, Primbon and Photooxy</p>
+                                <p> - Fixed Tiktok download and Instagram Download</p>
+                                <b><h6>08-11-2021</h6></b>
+                                <p> - Added Youtube Play video and audio</p>
+                                <p> - Added Mediafire download</p>
+                                <p> - Added Google serach & Google PlayStore Search</p>
+                                <p> - Added some feature on Anime images :)</p>
+                                <b><h6>08-13-2021</h6></b>
+                                <p> - Added Brainly </p>
+                                <p> - Added Github Stalk </p>
+                                <p> - Added Github Stalk Simple </p>
+                                <p> - Added Github Follower Check </p>
+                                <p> - Added Group WA Seearch </p>
+                                <p> - Added KKBI </p>
+                                <p> - Added Simi </p>
+                                <p> - Added Tebak Anime </p>
+                                <p> - Added New Menu Islami </p>
+                                <p> - Added New Menu Film Apik API </p>
+                                <b><h6>08-15-2021</h6></b>
+                                <p> - Fixed Tiktok Download (v1) </p>
+                                <p> - Added Tebak Gambar </p>
+                                <p> - Added Chara Search </p>
+                                <p> - Added Lirik </p>
+                                <p> - Added Komiku </p>
+                                <p> - Added Otakudesu Search </p>
+                                <p> - Added Instagram Story </p>
+                                <p> - Added Instagram V2 </p>
+                                <p> - Added Covid Info </p>
+                                <p> - Added YouTube Download V2 </p>
+                                <b><h6>Soon Login System :)</h6></b>
+                                <b><h6>08-20-2021</h6></b>
+                                <p> - Fixed Mediafire Download </p>
+                                <p> - Fixed Joox </p>
+                                <p> - Fixed minor bug </p>
+                                <p> - Added Facebook Downloader</p>
+                                <p> - Added New Menu Wallpaper (Search and Random) </p>
+                                <b><h6>08-27-2021</h6></b>
+                                <p> - Added TikTok Musik </p>
+                                <p> - Added Genshin Impact Search </p>
+                                <p> - Removed Ig Download V1 </p>
+                                <p> - Added Ig TV </p>
+                                <p> - Added Twitter Download </p>
+                                <p> - Added Wallpaper Mobile </p>
+                                <p> - Added some features in anime menu </p>
+                                <p> - Fixed Ig Stalk </p>
+                                <p> - Etc forgot lmao, just check docs </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <footer class="main-footer">
+                <div class="footer-left">
+                    Copyright &copy; 2021
+                    <div class="bullet"></div> Design By <a href="https://reiyuura.me">Reiyuura</a>
+                </div>
+                <div class="footer-right">
+
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- General JS Scripts -->
+    <script src="modules/jquery.min.js"></script>
+    <script src="modules/popper.js"></script>
+    <script src="modules/tooltip.js"></script>
+    <script src="modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="modules/moment.min.js"></script>
+    <script src="js/stisla.js"></script>
+
+    <!-- JS Libraies -->
+    <script src="modules/summernote/summernote-bs4.js"></script>
+
+    <!-- Page Specific JS File -->
+
+    <!-- Template JS File -->
+    <script src="js/scripts.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
